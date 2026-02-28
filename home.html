@@ -1,175 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Simple Website</title>
-  <style>
-    /* Reset some default styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      background-color: #f4f6f8;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #333;
-      padding: 10px 0;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav ul li a:hover {
-      color: #4CAF50;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .hero {
-      background-color: white;
-      padding: 40px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .hero h2 {
-      margin-bottom: 10px;
-      color: #4CAF50;
-    }
-
-    .hero p {
-      margin-bottom: 20px;
-    }
-
-    .hero button {
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .hero button:hover {
-      background-color: #45a049;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      color: #4CAF50;
-    }
-
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 30px;
-    }
-  </style>
+    <title>College Event Management</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Event listing and registration page">
+    <meta name="keywords" content="Events, Registration, College">
+    <meta name="author" content="Hashini J">
+    <link rel="icon" href="favicon.ico">
 </head>
+
 <body>
+    <header>
+        <h1>College Event Management System</h1>
+        <p>Welcome to our event portal</p>
+    </header>
 
-  <header>
-    <h1>My First Website</h1>
-    <p>Welcome to my simple HTML & CSS website</p>
-  </header>
+    <nav>
+            <a href="events.html">Events</a>
+            <a href="register">Register</a>
+            <a href="contact">Contact</a>
+    </nav>
 
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <main>
 
-  <div class="container">
-    <section id="home" class="hero">
-      <h2>Welcome!</h2>
-      <p>This is a simple, clean, and responsive website made using only HTML and CSS.</p>
-      <button>Get Started</button>
-    </section>
+        <section id="events">
+            <h2>Upcoming Events</h2>
 
-    <section id="services" class="cards">
-      <div class="card">
-        <h3>Web Design</h3>
-        <p>We create beautiful and user-friendly website designs.</p>
-      </div>
-      <div class="card">
-        <h3>Development</h3>
-        <p>We build fast and responsive websites using modern technologies.</p>
-      </div>
-      <div class="card">
-        <h3>Support</h3>
-        <p>We provide 24/7 support to help you anytime.</p>
-      </div>
-    </section>
+            <article>
+                <h3>Technical Symposium</h3>
+                <p>This event includes paper presentation, coding contest, and workshops.</p>
 
-    <section id="about" class="hero">
-      <h2>About Us</h2>
-      <p>We are passionate about creating simple and effective web solutions for everyone.</p>
-    </section>
+                <figure>
+                    <img src="tech.jpg" alt="Technical Event Image">
+                    <figcaption>Technical Symposium 2026</figcaption>
+                </figure>
 
-    <section id="contact" class="hero">
-      <h2>Contact Us</h2>
-      <p>Email: info@example.com</p>
-      <p>Phone: +91 98765 43210</p>
-    </section>
-  </div>
+                <dl>
+                    <dt>Date</dt>
+                    <dd>15th February 2026</dd>
 
-  <footer>
-    <p>&copy; 2026 My First Website. All rights reserved.</p>
-  </footer>
+                    <dt>Venue</dt>
+                    <dd>College Auditorium</dd>
+
+                    <dt>Fee</dt>
+                    <dd>₹100</dd>
+                </dl>
+            </article>
+
+            <article>
+                <h3>Cultural Fest</h3>
+                <p>Enjoy dance, music, drama, and fun competitions.</p>
+
+                <figure>
+                    <img src="cultural.jpg" alt="Cultural Event Image">
+                    <figcaption>Annual Cultural Fest</figcaption>
+                </figure>
+                 <img src="event image.jfif" alt="college"
+
+                
+
+                <dl>
+                    <dt>Date</dt>
+                    <dd>20th February 2026</dd>
+
+                    <dt>Venue</dt>
+                    <dd>Open Ground</dd>
+
+                    <dt>Fee</dt>
+                    <dd>Free</dd>
+                </dl>
+            </article>
+        </section>
+
+        <section id="register">
+            <h2>Event Registration Form</h2>
+
+            <form>
+                <p>
+                    <label>Name:</label>
+                    <input type="text" name="name">
+                </p>
+
+                <p>
+                    <label>Email:</label>
+                    <input type="email" name="email">
+                </p>
+
+                <p>
+                    <label>Department:</label>
+                    <input type="text" name="department">
+                </p>
+
+                <p>
+                    <label>Select Event:</label>
+                    <select name="event">
+                        <option>Technical Symposium</option>
+                        <option>Cultural Fest</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label>Gender:</label>
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                </p>
+
+                <p>
+                    <label>Skills:</label>
+                    <input type="checkbox" name="skill" value="Coding"> Coding
+                    <input type="checkbox" name="skill" value="Design"> Design
+                    <input type="checkbox" name="skill" value="Music"> Music
+                </p>
+
+                <p>
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Clear">
+                </p>
+            </form>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+
+            <address>
+                <p>Email: event@college.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Location: Chennai, Tamil Nadu</p>
+            </address>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 College Event Management System</p>
+    </footer>
+    <img src="college image.jpg" alt="college"
 
 </body>
 </html>
+
+-
