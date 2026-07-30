@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Women Collection - Zudio Fashion</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* HERO */
+
+.women-hero{
+height:60vh;
+background:
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d") center/cover;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.women-hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+/* COLLECTION */
+
+.collection-section{
+padding:80px 10%;
+background:#f8f8f8;
+}
+
+.collection-title{
+text-align:center;
+font-size:32px;
+margin-bottom:50px;
+}
+
+/* PRODUCT GRID */
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+/* PRODUCT CARD */
+
+.product-card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.3s;
+animation:fadeUp 1s ease;
+text-align:center;
+}
+
+.product-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* IMAGE */
+
+.product-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+transition:0.4s;
+}
+
+.product-card:hover img{
+transform:scale(1.1);
+}
+
+/* TEXT */
+
+.product-card h3{
+margin:15px 0 5px;
+}
+
+.product-card p{
+color:#777;
+margin-bottom:15px;
+}
+
+/* BUTTON */
+
+.buy-btn{
+display:inline-block;
+margin-bottom:20px;
+padding:10px 25px;
+background:#ff2e63;
+color:white;
+text-decoration:none;
+border-radius:25px;
+transition:0.3s;
+}
+
+.buy-btn:hover{
+background:#ff4d7f;
+transform:scale(1.05);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.women-hero h1{
+font-size:36px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Zudio</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="men.html">Men</a>
+<a href="women.html">Women</a>
+<a href="kids.html">Kids</a>
+<a href="store.html">Stores</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="women-hero">
+
+<div>
+
+<h1>Women Collection</h1>
+
+<p>Discover trendy and stylish outfits</p>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="collection-section">
+
+<h2 class="collection-title">Trending Women's Fashion</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1520975661595-6453be3f7070">
+
+<h3>Floral Summer Dress</h3>
+
+<p>₹899</p>
+
+<a href="product.html" class="buy-btn">View Product</a>
+
+</div>
+
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1495121605193-b116b5b09c52">
+
+<h3>Casual Fashion Top</h3>
+
+<p>₹499</p>
+
+<a href="product.html" class="buy-btn">View Product</a>
+
+</div>
+
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb">
+
+<h3>Denim Jacket</h3>
+
+<p>₹1299</p>
+
+<a href="product.html" class="buy-btn">View Product</a>
+
+</div>
+
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e">
+
+<h3>Elegant Skirt</h3>
+
+<p>₹799</p>
+
+<a href="product.html" class="buy-btn">View Product</a>
+
+</div>
+
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1509631179647-0177331693ae">
+
+<h3>Party Dress</h3>
+
+<p>₹1499</p>
+
+<a href="product.html" class="buy-btn">View Product</a>
+
+</div>
+
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c">
+
+<h3>Stylish Crop Top</h3>
+
+<p>₹399</p>
+
+<a href="product.html" class="buy-btn">View Product</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Zudio Fashion | All Rights Reserved</p>
+
+</footer>
+
+</body>
+
+</html>

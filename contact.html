@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Zudio Fashion</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* HEADER (self-contained so this page never depends on other pages' inline styles) */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 10%;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo-container{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-container img{
+width:40px;
+height:40px;
+object-fit:contain;
+}
+
+.logo{
+font-size:22px;
+font-weight:600;
+color:#ff2e63;
+}
+
+nav a{
+margin:0 12px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+nav a:hover{
+color:#ff2e63;
+}
+
+/* CONTACT PAGE */
+
+.contact-section{
+padding:80px 10%;
+background:#f8f8f8;
+}
+
+.contact-title{
+text-align:center;
+font-size:36px;
+margin-bottom:10px;
+}
+
+.contact-subtitle{
+text-align:center;
+color:#777;
+margin-bottom:50px;
+}
+
+/* CONTACT GRID */
+
+.contact-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+/* CONTACT FORM */
+
+.contact-form{
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+animation:fadeUp 1s ease;
+}
+
+.contact-form h3{
+margin-bottom:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:5px;
+border:1px solid #ddd;
+font-size:14px;
+font-family:inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+outline:none;
+border-color:#ff2e63;
+}
+
+.contact-form textarea{
+resize:none;
+height:120px;
+}
+
+.contact-form button{
+width:100%;
+padding:12px;
+border:none;
+background:#ff2e63;
+color:white;
+font-size:16px;
+border-radius:5px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.contact-form button:hover{
+background:#ff4d7f;
+transform:scale(1.03);
+}
+
+.form-error{
+color:#e2264d;
+font-size:13px;
+margin:-5px 0 5px;
+display:none;
+}
+
+.form-success{
+display:none;
+background:#e9fbe9;
+color:#1c7a1c;
+border:1px solid #b6e6b6;
+padding:12px;
+border-radius:5px;
+margin-bottom:15px;
+font-size:14px;
+}
+
+/* CONTACT INFO */
+
+.contact-info{
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+animation:fadeUp 1.2s ease;
+}
+
+.contact-info h3{
+margin-bottom:20px;
+}
+
+.info-item{
+margin-bottom:20px;
+}
+
+.info-item strong{
+display:block;
+margin-bottom:5px;
+}
+
+.info-item a{
+color:#555;
+text-decoration:none;
+}
+
+.info-item a:hover{
+color:#ff2e63;
+}
+
+/* SOCIAL ICONS */
+
+.social-icons{
+margin-top:20px;
+}
+
+.social-icons a{
+display:inline-block;
+margin-right:10px;
+font-size:20px;
+color:#ff2e63;
+transition:0.3s;
+text-decoration:none;
+}
+
+.social-icons a:hover{
+transform:scale(1.2);
+}
+
+/* MAP */
+
+.map{
+margin-top:50px;
+border-radius:10px;
+overflow:hidden;
+}
+
+/* FAQ */
+
+.faq-section{
+padding:80px 10%;
+background:white;
+}
+
+.faq-title{
+text-align:center;
+font-size:32px;
+margin-bottom:40px;
+}
+
+.faq-list{
+max-width:800px;
+margin:0 auto;
+}
+
+.faq-item{
+border-bottom:1px solid #eee;
+}
+
+.faq-question{
+width:100%;
+text-align:left;
+background:none;
+border:none;
+padding:20px 0;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:#222;
+font-family:inherit;
+}
+
+.faq-question .icon{
+color:#ff2e63;
+font-size:20px;
+transition:0.3s;
+}
+
+.faq-item.active .faq-question .icon{
+transform:rotate(45deg);
+}
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+transition:max-height 0.3s ease;
+color:#666;
+line-height:1.6;
+}
+
+.faq-item.active .faq-answer{
+max-height:200px;
+padding-bottom:20px;
+}
+
+/* WHATSAPP FLOATING BUTTON */
+
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+width:56px;
+height:56px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+text-decoration:none;
+z-index:1000;
+transition:0.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+}
+
+.whatsapp-float svg{
+width:30px;
+height:30px;
+fill:white;
+}
+
+/* FOOTER */
+
+.footer{
+background:#000;
+color:white;
+padding:60px 10%;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:40px;
+}
+
+.footer a{
+display:block;
+color:#bbb;
+text-decoration:none;
+margin-bottom:8px;
+}
+
+.footer a:hover{
+color:white;
+}
+
+.footer-bottom{
+margin-top:40px;
+text-align:center;
+border-top:1px solid #333;
+padding-top:20px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.contact-container{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo-container">
+<img src="https://cdn-icons-png.flaticon.com/512/892/892458.png">
+<div class="logo">Zudio</div>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="men.html">Men</a>
+<a href="women.html">Women</a>
+<a href="kids.html">Kids</a>
+<a href="store.html">Stores</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<section class="contact-section">
+
+<h1 class="contact-title">Contact Us</h1>
+<p class="contact-subtitle">We'd love to hear from you</p>
+
+<div class="contact-container">
+
+<!-- CONTACT FORM -->
+
+<div class="contact-form">
+
+<h3>Send us a Message</h3>
+
+<div class="form-success" id="formSuccess">Thanks! Your message has been sent — we'll get back to you soon.</div>
+
+<form id="contactForm" novalidate>
+
+<input type="text" id="nameField" placeholder="Full Name" required>
+<div class="form-error" id="nameError">Please enter your name.</div>
+
+<input type="email" id="emailField" placeholder="Email Address" required>
+<div class="form-error" id="emailError">Please enter a valid email address.</div>
+
+<input type="text" id="subjectField" placeholder="Subject">
+
+<textarea id="messageField" placeholder="Your Message" required></textarea>
+<div class="form-error" id="messageError">Please enter a message.</div>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+
+<!-- CONTACT INFO -->
+
+<div class="contact-info">
+
+<h3>Our Information</h3>
+
+<div class="info-item">
+<strong>Address</strong>
+<p>Express Avenue Mall, Chennai</p>
+</div>
+
+<div class="info-item">
+<strong>Phone</strong>
+<p><a href="tel:+919876543210">+91 98765 43210</a></p>
+</div>
+
+<div class="info-item">
+<strong>Email</strong>
+<p><a href="mailto:support@zudiofashion.com">support@zudiofashion.com</a></p>
+</div>
+
+<div class="info-item">
+<strong>Working Hours</strong>
+<p>Mon - Sun : 10:00 AM - 10:00 PM</p>
+</div>
+
+<div class="social-icons">
+
+<a href="#" aria-label="Website">🌐</a>
+<a href="#" aria-label="Instagram">📷</a>
+<a href="#" aria-label="Twitter">🐦</a>
+<a href="#" aria-label="Facebook">📘</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- GOOGLE MAP -->
+
+<div class="map">
+
+<iframe
+src="https://maps.google.com/maps?q=express%20avenue%20mall%20chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="350"
+style="border:0;">
+</iframe>
+
+</div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="faq-section">
+
+<h2 class="faq-title">Frequently Asked Questions</h2>
+
+<div class="faq-list">
+
+<div class="faq-item">
+<button class="faq-question">How long does delivery take? <span class="icon">+</span></button>
+<div class="faq-answer"><p>Orders are usually delivered within 3-5 business days, depending on your location. Free delivery applies on orders above ₹999.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">What is your return policy? <span class="icon">+</span></button>
+<div class="faq-answer"><p>Unused items with tags can be returned within 15 days of delivery for a full refund or exchange.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">Do you have a store near me? <span class="icon">+</span></button>
+<div class="faq-answer"><p>We have stores across major cities in India. Check our <a href="store.html">Stores</a> page for the full list of locations.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">How can I track my order? <span class="icon">+</span></button>
+<div class="faq-answer"><p>Once your order ships, you'll receive a tracking link by email and SMS to follow its progress in real time.</p></div>
+</div>
+
+</div>
+
+</section>
+
+<!-- WHATSAPP QUICK CONTACT -->
+
+<a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+<svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.19 3.03 14.7 2 12.04 2m0 1.67c2.24 0 4.35.87 5.93 2.46 1.58 1.58 2.46 3.69 2.45 5.93 0 4.62-3.76 8.38-8.39 8.38-1.44 0-2.86-.37-4.11-1.07l-.29-.17-3.11.82.83-3.04-.19-.31a8.35 8.35 0 0 1-1.28-4.46c0-4.63 3.77-8.38 8.4-8.38m-4.65 4.42c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.69 2.7 4.19 3.7 2.07.85 2.49.68 2.94.64.45-.04 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.24-.63.8-.78.97-.14.16-.29.18-.53.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.35-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.29.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.43-.06-.12-.55-1.36-.76-1.85-.2-.48-.4-.42-.55-.42h-.47" /></svg>
+</a>
+
+<footer class="footer">
+
+<div class="footer-grid">
+
+<div>
+<h3>Zudio</h3>
+<p>Affordable fashion for men, women and kids.</p>
+</div>
+
+<div>
+<h3>Quick Links</h3>
+<a href="men.html">Men</a>
+<a href="women.html">Women</a>
+<a href="kids.html">Kids</a>
+</div>
+
+<div>
+<h3>Customer Service</h3>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Returns</a>
+<a href="about.html">Privacy Policy</a>
+</div>
+
+<div>
+<h3>Download App</h3>
+
+<div class="app-buttons">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" width="150">
+
+<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" width="150">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>© 2026 Zudio Fashion | All Rights Reserved</p>
+
+</div>
+
+</footer>
+
+<script>
+
+// Simple client-side validation + success message (no backend, so we just simulate a send)
+const form = document.getElementById('contactForm');
+const nameField = document.getElementById('nameField');
+const emailField = document.getElementById('emailField');
+const messageField = document.getElementById('messageField');
+const successBox = document.getElementById('formSuccess');
+
+function setError(fieldId, show){
+document.getElementById(fieldId).style.display = show ? 'block' : 'none';
+}
+
+function isValidEmail(value){
+return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+form.addEventListener('submit', function(e){
+e.preventDefault();
+
+let valid = true;
+
+if(nameField.value.trim() === ''){
+setError('nameError', true);
+valid = false;
+} else {
+setError('nameError', false);
+}
+
+if(!isValidEmail(emailField.value.trim())){
+setError('emailError', true);
+valid = false;
+} else {
+setError('emailError', false);
+}
+
+if(messageField.value.trim() === ''){
+setError('messageError', true);
+valid = false;
+} else {
+setError('messageError', false);
+}
+
+if(valid){
+successBox.style.display = 'block';
+form.reset();
+setTimeout(() => { successBox.style.display = 'none'; }, 5000);
+}
+});
+
+// FAQ accordion
+document.querySelectorAll('.faq-question').forEach(btn => {
+btn.addEventListener('click', () => {
+const item = btn.closest('.faq-item');
+const wasActive = item.classList.contains('active');
+document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+if(!wasActive){
+item.classList.add('active');
+}
+});
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Your Cart | Zudio Fashion</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 10%;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo-container{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-container img{
+width:40px;
+}
+
+.logo{
+font-size:22px;
+font-weight:600;
+color:#ff2e63;
+}
+
+nav a{
+margin:0 12px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+nav a:hover{
+color:#ff2e63;
+}
+
+.cart-section{
+padding:80px 10%;
+min-height:50vh;
+}
+
+.cart-section h2{
+margin-bottom:40px;
+}
+
+.cart-item{
+display:flex;
+align-items:center;
+gap:20px;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+margin-bottom:20px;
+}
+
+.cart-item img{
+width:100px;
+height:100px;
+object-fit:cover;
+border-radius:8px;
+}
+
+.cart-item-details h3{
+margin-bottom:8px;
+}
+
+.cart-item-details p{
+color:#777;
+}
+
+.cart-total{
+margin-top:30px;
+font-size:20px;
+font-weight:600;
+}
+
+.checkout-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+background:#ff2e63;
+color:white;
+border:none;
+border-radius:25px;
+font-size:16px;
+cursor:pointer;
+text-decoration:none;
+transition:0.3s;
+}
+
+.checkout-btn:hover{
+background:#ff4d7f;
+}
+
+footer{
+background:#000;
+color:white;
+text-align:center;
+padding:35px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo-container">
+<img src="https://cdn-icons-png.flaticon.com/512/892/892458.png">
+<div class="logo">Zudio</div>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="men.html">Men</a>
+<a href="women.html">Women</a>
+<a href="kids.html">Kids</a>
+<a href="store.html">Stores</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<section class="cart-section">
+
+<h2>Your Cart</h2>
+
+<div class="cart-item">
+
+<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+
+<div class="cart-item-details">
+<h3>Oversized T-Shirt</h3>
+<p>₹499</p>
+</div>
+
+</div>
+
+<div class="cart-total">
+Total: ₹499
+</div>
+
+<a href="#" class="checkout-btn">Checkout</a>
+
+</section>
+
+<footer>
+<p>© 2026 Zudio Fashion | All Rights Reserved</p>
+</footer>
+
+</body>
+
+</html>

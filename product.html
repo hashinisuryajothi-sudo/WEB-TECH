@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Oversized Graphic T-Shirt | Zudio Fashion</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 10%;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo-container{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-container img{
+width:40px;
+}
+
+.logo{
+font-size:22px;
+font-weight:600;
+color:#ff2e63;
+}
+
+nav a{
+margin:0 12px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+nav a:hover{
+color:#ff2e63;
+}
+
+.product-section{
+padding:80px 10%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.product-section img{
+width:100%;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.product-details h2{
+margin-bottom:15px;
+}
+
+.product-details p{
+color:#777;
+font-size:20px;
+margin-bottom:25px;
+}
+
+.add-cart-btn{
+padding:12px 30px;
+background:#ff2e63;
+color:white;
+border:none;
+border-radius:25px;
+font-size:16px;
+cursor:pointer;
+text-decoration:none;
+display:inline-block;
+transition:0.3s;
+}
+
+.add-cart-btn:hover{
+background:#ff4d7f;
+}
+
+footer{
+background:#000;
+color:white;
+text-align:center;
+padding:35px;
+}
+
+@media(max-width:900px){
+.product-section{
+grid-template-columns:1fr;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo-container">
+<img src="https://cdn-icons-png.flaticon.com/512/892/892458.png">
+<div class="logo">Zudio</div>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="men.html">Men</a>
+<a href="women.html">Women</a>
+<a href="kids.html">Kids</a>
+<a href="store.html">Stores</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<section class="product-section">
+
+<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+
+<div class="product-details">
+
+<h2>Oversized Graphic T-Shirt</h2>
+<p>₹499</p>
+
+<a href="cart.html" class="add-cart-btn">Add to Cart</a>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Zudio Fashion | All Rights Reserved</p>
+</footer>
+
+</body>
+
+</html>
